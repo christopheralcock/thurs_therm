@@ -64,25 +64,25 @@ $(document).ready(function() {
 
   $("#up").mouseenter(function() {
     $(this).animate({
-      height: "+=20px"
+      width: "+=20px"
     });
   });
 
   $("#up").mouseleave(function() {
     $(this).animate({
-      height: "-=20px"
+      width: "-=20px"
     });
   });
 
   $("#down").mouseenter(function() {
     $(this).animate({
-      height: "+=20px"
+      width: "+=20px"
     });
   });
 
   $("#down").mouseleave(function() {
     $(this).animate({
-      height: "-=20px"
+      width: "-=20px"
     });
   });
 
