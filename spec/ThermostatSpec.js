@@ -75,19 +75,19 @@ describe('Thermostat', function() {
     it('is green when temperature is under 18', function() {
       thermostat.temperature = 17;
       thermostat.setColour();
-      expect(thermostat.colour).toBe("green");
+      expect(thermostat.colour).toBe("#77DD77");
     });
 
     it('is yellow when temperature is under 25', function() {
       thermostat.temperature = 24;
       thermostat.setColour();
-      expect(thermostat.colour).toBe("yellow");
+      expect(thermostat.colour).toBe("#FDFD96");
     });
 
     it('is red when temperature is over 25', function() {
       thermostat.temperature = 25;
       thermostat.setColour();
-      expect(thermostat.colour).toBe("red");
+      expect(thermostat.colour).toBe("#FF6961");
     });
   });
 
