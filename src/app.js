@@ -1,39 +1,89 @@
 thermostat = new Thermostat();
 
-var updateTemp = function() {
-  var temperature = document.getElementById('temperature');
-  temperature.innerHTML = thermostat.temperature;
-  thermostat.setColour();
-  temperature.style.color = thermostat.colour;
-};
+$(document).ready(function() {
 
-updateTemp();
+  var updateTemp = function() {
+    $("#temperature").show(function() {
+      temperature.innerHTML = thermostat.temperature;
+      thermostat.setColour();
+      temperature.style.color = thermostat.colour;
+    });
+  };
 
-var temperatureUp = document.getElementById('up');
-  temperatureUp.onclick = function() {
+  $("#temperature").show(function() {
+    updateTemp();
+  });
+
+  $("#up").click(function() {
     thermostat.up();
     updateTemp();
-  };
+  });
 
-var temperatureDown = document.getElementById('down');
-  temperatureDown.onclick = function() {
+  $("#down").click(function() {
     thermostat.down();
     updateTemp();
-  };
+  });
 
-var thermostatReset = document.getElementById('reset');
-  thermostatReset.onclick = function() {
+  $("#reset").click(function() {
     thermostat.reset();
     updateTemp();
-  };
+  });
 
-var powerSaverMode = document.getElementById('powersavingmode');
-  powerSaverMode.onchange = function() {
-    if(thermostat.powerSavingMode === true) {
+  $("#powersavingmode").change(function() {
+    if (thermostat.powerSavingMode === true) {
       thermostat.powerSaverOff();
-      updateTemp();
     } else {
       thermostat.powerSaverOn();
-      updateTemp();
-    };
-  };
+    }
+  });
+
+  $("#up").mouseenter(function() {
+    $(this).animate({
+      height: "+=20px"
+    });
+  });
+
+  $("#up").mouseleave(function() {
+    $(this).animate({
+      height: "-=20px"
+    });
+  });
+
+  $("#down").mouseenter(function() {
+    $(this).animate({
+      height: "+=20px"
+    });
+  });
+
+  $("#down").mouseleave(function() {
+    $(this).animate({
+      height: "-=20px"
+    });
+  });
+
+
+  $("#up").mouseenter(function() {
+    $(this).animate({
+      height: "+=20px"
+    });
+  });
+
+  $("#up").mouseleave(function() {
+    $(this).animate({
+      height: "-=20px"
+    });
+  });
+
+  $("#down").mouseenter(function() {
+    $(this).animate({
+      height: "+=20px"
+    });
+  });
+
+  $("#down").mouseleave(function() {
+    $(this).animate({
+      height: "-=20px"
+    });
+  });
+
+});
