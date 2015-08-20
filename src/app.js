@@ -10,17 +10,25 @@ $(document).ready(function() {
     });
   };
 
-var city = $('#city').val();
-// var country = $('#country').val();
 
-
-  $("#weather_api").show(function() {
-    var city = $('#city').val();
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric",function(result){
-    // $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric",function(result){
-        weather_api.innerHTML = "weather in "+result.name+": "+result.weather[0].description+": "+result.main.temp+" &#8451"+" & wind speed: "+result.wind.speed;
-    });
+$('#search_city').click(function() {
+  var city = $('#city').val();
+  $.getJSON(('http://api.openweathermap.org/data/2.5/weather?q=' + city ), function(data) {
+    $('#weather_api').html(Math.round((data.main.temp)-273.15));
   });
+});
+
+// var city = $('#city').val();
+// // var country = $('#country').val();
+//
+//
+//   $("#weather_api").show(function() {
+//     var city = $('#city').val();
+//     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric",function(result){
+//     // $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=paris&units=metric",function(result){
+//         weather_api.innerHTML = "weather in "+result.name+": "+result.weather[0].description+": "+result.main.temp+" &#8451"+" & wind speed: "+result.wind.speed;
+//     });
+//   });
 
   $("#city").show(function() {
     updateTemp();
