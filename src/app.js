@@ -60,54 +60,54 @@ $('#search_city').click(function() {
       thermostat.powerSaverOn();
     }
   });
-  //
-  // $("#up").mouseenter(function() {
-  //   $(this).animate({
-  //     height: "+=20px"
-  //   });
-  // });
-  //
-  // $("#up").mouseleave(function() {
-  //   $(this).animate({
-  //     height: "-=20px"
-  //   });
-  // });
-  //
-  // $("#down").mouseenter(function() {
-  //   $(this).animate({
-  //     height: "+=20px"
-  //   });
-  // });
-  //
-  // $("#down").mouseleave(function() {
-  //   $(this).animate({
-  //     height: "-=20px"
-  //   });
-  // });
-  //
-  //
-  // $("#up").mouseenter(function() {
-  //   $(this).animate({
-  //     width: "+=20px"
-  //   });
-  // });
-  //
-  // $("#up").mouseleave(function() {
-  //   $(this).animate({
-  //     width: "-=20px"
-  //   });
-  // });
-  //
-  // $("#down").mouseenter(function() {
-  //   $(this).animate({
-  //     width: "+=20px"
-  //   });
-  // });
-  //
-  // $("#down").mouseleave(function() {
-  //   $(this).animate({
-  //     width: "-=20px"
-  //   });
-  // });
+  
+  $("#up").mouseenter(function() {
+    $(this).animate({
+      height: "+=2px"
+    });
+  });
+
+  $("#up").mouseleave(function() {
+    $(this).animate({
+      height: "-=2px"
+    });
+  });
+
+  $("#down").mouseenter(function() {
+    $(this).animate({
+      height: "+=2px"
+    });
+  });
+
+  $("#down").mouseleave(function() {
+    $(this).animate({
+      height: "-=2px"
+    });
+  });
+
+
+  $("#up").mouseenter(function() {
+    $(this).animate({
+      width: "+=2px"
+    });
+  });
+
+  $("#up").mouseleave(function() {
+    $(this).animate({
+      width: "-=2px"
+    });
+  });
+
+  $("#down").mouseenter(function() {
+    $(this).animate({
+      width: "+=2px"
+    });
+  });
+
+  $("#down").mouseleave(function() {
+    $(this).animate({
+      width: "-=2px"
+    });
+  });
 
 });
